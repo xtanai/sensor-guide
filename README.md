@@ -5,7 +5,7 @@ There are **three sensor-integration options** for **MotionCoder**:
 ### 1) **Budget-Optimized: MVCore3D**
 
 * **Stack:** **MMPose + Anipose**
-* **Budget:** from **€100** for **4× OV9281 (UVC)** incl. **DIY strobe** — **best price/performance** (BOM in repo)
+* **Budget:** from **€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance** (BOM in [repo](https://github.com/xtanai/mvcore3d))
 * **Requirements:** **strong CPU** (at least **Ryzen 7 5700X / 7900** or equivalent Intel)
 * **Cameras:** Alternatively **USB3 global-shutter** with **trigger/strobe**; **recommendations & trade-offs** are listed in the **camera list** in the repo
 * **Note:** If camera costs exceed ~€200 (rare) or ~€800 (typical setups), **Leap Motion** can be a sensible alternative (see **“LeapC”** below).
