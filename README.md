@@ -76,7 +76,7 @@ for 3D Hand-Tracking Reconstruction
 | 4× Kinect / RealSense         | —                     |  **~20%** | Limited scalability, lower precision; not suitable for precise finger/tool gestures.                    |
 | 4× high-quality RGB webcams   | **MediaPipe / YOLO**  |  **~10%** | Theoretically scalable; in practice blur/artifacts/latency for precise hands/tools.                     |
 | 1× Kinect / RealSense         | —                     |   **~7%** | Prototype playground; not for precise hand/tool gestures.                                               |
-| Myo armband                   | —                     |   **~5%** | Very limited suitability for this use case.                                                             |
+| Myo armband / AIfES           | —                     |   **~5%** | Very limited suitability for this use case.                                                             |
 
 *Note:* Percentages are **use-case estimates** (precision, robustness, latency, occlusion, tunability) — **guidance**, not lab measurements.
 
