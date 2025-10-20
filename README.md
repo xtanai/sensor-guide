@@ -1,7 +1,7 @@
 # 🎥 Recommended Hardware 
 for 3D Hand-Tracking Reconstruction
 
-There are **three sensor-integration options** for **MotionCoder**:
+## 📍 There are **three sensor-integration options** for **MotionCoder**:
 
 ### 1) **Budget-Optimized: MVCore3D**
 
