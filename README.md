@@ -18,7 +18,7 @@ There are **three sensor-integration options** for **MotionCoder**:
 
 ---
 
-### 2) **Comfort: LeapC**
+### 2) **Comfort: LeapC (Leap2Pose)**
 
 * **4× Leap Motion Controller** in a stable frame, properly aligned → **works very well** with MotionCoder
 * **2× Leap** → **works**, with limitations (being optimized)
