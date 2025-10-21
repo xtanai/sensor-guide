@@ -82,6 +82,6 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
-## 📷 Hardware Lists
+## 📷 Sensor Lists
 
 Coming soon.
