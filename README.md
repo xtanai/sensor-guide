@@ -19,8 +19,9 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
-### 2) **Comfort: Leap2Pose (LeapC)**
+### 2) **Comfort: Leap2Pose**
 
+* **Stack:** **LeapC**
 * **4× Leap Motion Controller** in a stable frame, properly aligned → **works very well** with MotionCoder
 * **2× Leap** → **works**, with limitations (being optimized)
 * **1× Leap** → **significantly limited**; robust, adapted gestures are provided
@@ -36,6 +37,7 @@ for 3D Hand-Tracking Reconstruction
 
 ### 3) **High-Performance: MVMono3D**
 
+* **Stack:** (later)
 * **Upgrade path** to true **multi-view** with **Mono8/RAW10**, **hardware trigger/sync**, and a **high-precision geometry pipeline** — **without** expensive **ToF sensors**.
 * **AI-assisted geometry** to reduce **occlusions** and boost **quality**.
 
