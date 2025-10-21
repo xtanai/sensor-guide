@@ -1,7 +1,7 @@
-# 🎥 Recommended Hardware 
+# 🎥 Recommended Sensor Options
 for 3D Hand-Tracking Reconstruction
 
-## 📍 There are **three sensor-integration options** for **MotionCoder**:
+## 📍 Three options integrated with MotionCoder:
 
 ### 1) **Budget-Optimized: MVCore3D**
 
@@ -19,7 +19,7 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
-### 2) **Comfort: LeapC (Leap2Pose)**
+### 2) **Comfort: Leap2Pose (LeapC)**
 
 * **4× Leap Motion Controller** in a stable frame, properly aligned → **works very well** with MotionCoder
 * **2× Leap** → **works**, with limitations (being optimized)
@@ -59,20 +59,20 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
-## 📊 **Coarse Assessment of Optimal Hardware**
+## 📊 **Coarse Assessment of Optimal Sensor**
 
 *relative to my CAD/DCC use case*
 
-| Hardware                      | Integration Module    |   Level % | Notes                                                                                                   |
+| Sensor                        | Integration Module    |   Level % | Notes                                                                                                   |
 | ----------------------------- | --------------------- | --------: | ------------------------------------------------------------------------------------------------------- |
 | 4× mono cams (global shutter) | **MVMono3D**          | **~100%** | Reference level; highly scalable (more cams/MP, PTZ with zoom/focus, strong GPU, sufficient bandwidth). |
-| 4× Leap Motion Controller 2   | **LeapC**             |  **~50%** | Good baseline for hand tracking; slightly limited scalability.                                          |
+| 4× Leap Motion Controller 2   | **Leap2Pose**         |  **~50%** | Good baseline for hand tracking; slightly limited scalability.                                          |
 | 4× U20CAM-9281M               | **MVCore3D + TDM**    |  **~45%** | Low-budget, immediately available; high CPU demand.                                                     |
-| 4× Leap Motion (Gen 1)        | **LeapC**             |  **~42%** | Inexpensive, but reliable working distance only ~30–40 cm.                                              |
-| 2× Leap Motion Controller 2   | **LeapC**             |  **~40%** | Good latency; occlusion gaps depending on pose.                                                         |
+| 4× Leap Motion (Gen 1)        | **Leap2Pose**         |  **~42%** | Inexpensive, but reliable working distance only ~30–40 cm.                                              |
+| 2× Leap Motion Controller 2   | **Leap2Pose**         |  **~40%** | Good latency; occlusion gaps depending on pose.                                                         |
 | 4× U20CAM-9281M               | **MVCore3D (no TDM)** |  **~30%** | IR always on → crosstalk/blooming; softer edges, less stable reconstruction.                            |
 | 2× U20CAM-9281M               | **MVCore3D + TDM**    |  **~25%** | Stereo helps, but without HW sync/MJPEG decode: more fragile, less occlusion headroom, higher CPU load. |
-| 1× Leap Motion Controller 2   | **LeapC**             |  **~25%** | Very smooth, but strongly pose/occlusion-dependent; small volume.                                       |
+| 1× Leap Motion Controller 2   | **Leap2Pose**         |  **~25%** | Very smooth, but strongly pose/occlusion-dependent; small volume.                                       |
 | 4× Kinect / RealSense         | —                     |  **~20%** | Limited scalability, lower precision; not suitable for precise finger/tool gestures.                    |
 | 4× high-quality RGB webcams   | **MediaPipe / YOLO**  |  **~10%** | Theoretically scalable; in practice blur/artifacts/latency for precise hands/tools.                     |
 | 1× Kinect / RealSense         | —                     |   **~7%** | Prototype playground; not for precise hand/tool gestures.                                               |
