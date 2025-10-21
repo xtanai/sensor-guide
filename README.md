@@ -5,8 +5,8 @@ for 3D Hand-Tracking Reconstruction
 
 ### 1) **Budget-Optimized: MVCore3D**
 
-* **Stack:** **MMPose + Anipose**
-* **Budget:** from **€100** for **4× OV9281 (UVC)** + **TDMStrobe** + **libjpeg-turbo** — **best price/performance** (BOM in [MVCore3D](https://github.com/xtanai/mvcore3d) and [TDMStrobe](https://github.com/xtanai/tdmstrobe))
+* **Stack:** **MMPose + Anipose + libjpeg-turbo**
+* **Budget:** from **€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance** (BOM in [MVCore3D](https://github.com/xtanai/mvcore3d) and [TDMStrobe](https://github.com/xtanai/tdmstrobe))
 * **Requirements:** **strong CPU** (at least **Ryzen 7 5700X / 7900** or equivalent Intel)
 * **Cameras:** Alternatively **USB3 global-shutter** with **trigger/strobe**; **recommendations & trade-offs** are listed in the **camera list** in the repo
 * **Note:** If camera costs exceed ~€200 (rare) or ~€800 (typical setups), **Leap Motion** can be a sensible alternative (see **“LeapC”** below).
