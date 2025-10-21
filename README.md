@@ -10,7 +10,7 @@ for 3D Hand-Tracking Reconstruction
 * **Requirements:** **strong CPU** (at least **Ryzen 7 5700X / 7900** or equivalent Intel)
 * **Cameras:** Alternatively **USB3 global-shutter** with **trigger/strobe**; **recommendations & trade-offs** are listed in the **camera list** in the repo
 * **Note:** If camera costs exceed ~€200 (rare) or ~€800 (typical setups), **Leap Motion** can be a sensible alternative (see **Leap2Pose** below).
-* **Not recommended:** **Standard RGB webcams** (rolling shutter, auto exposure/gain, weak IR response) — fine for experiments, **unsuitable for precise hand tracking**. Also **depth solutions (ToF/active stereo, e.g., Intel RealSense, Kinect)** are often **unsuitable** for fine hand/finger tracking: **relatively expensive**, **lower/inconsistent FPS**, and **insufficient precision** for **parametric CAD commands**.
+* **Not recommended:** **Standard RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max** etc. (rolling shutter, auto exposure/gain, weak IR response) — fine for experiments, **unsuitable for precise hand tracking**. Also **depth solutions (ToF/active stereo, e.g., Intel RealSense, Kinect)** are often **unsuitable** for fine hand/finger tracking: **relatively expensive**, **lower/inconsistent FPS**, and **insufficient precision** for **parametric CAD commands**.
 
 **Pros / Cons**
 
