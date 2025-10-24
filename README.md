@@ -95,9 +95,9 @@ for 3D Hand-Tracking Reconstruction
 
 | Sensor                        | Integration Module    |   Level % | Notes                                                                                                |
 | ----------------------------- | --------------------- | --------: | ---------------------------------------------------------------------------------------------------- |
-| 4× mono cams (global shutter) | **MVMono3D**          | **~100%** | Reference setup; highly scalable (more cams/MP), PTZ (zoom/focus), strong GPU, ample bandwidth.      |
-| 4× mono cams (global shutter) | **MVRaw3D**           |  **~70%** | RAW (Bayer/Mono) pipeline; low latency, high fidelity; needs HW sync & careful debayer/denoise.      |
-| 4× mono cams (global shutter) | **MVYUV3D**           |  **~60%** | Uncompressed YUV (YUY2/UYVY/NV12); less CPU than MJPEG, more USB; fix exposure/gain for determinism. |
+| 4× mono cams (global shutter) | **MVMono3D + TDM**    | **~100%** | Reference setup; highly scalable (more cams/MP), PTZ (zoom/focus), strong GPU, ample bandwidth.      |
+| 4× mono cams (global shutter) | **MVRaw3D + TDM**     |  **~70%** | RAW (Bayer/Mono) pipeline; low latency, high fidelity; needs HW sync & careful debayer/denoise.      |
+| 4× mono cams (global shutter) | **MVYUV3D + TDM**     |  **~60%** | Uncompressed YUV (YUY2/UYVY/NV12); less CPU than MJPEG, more USB; fix exposure/gain for determinism. |
 | 4× Leap Motion Controller 2   | **Leap2Pose**         |  **~50%** | Solid baseline; high FPS/low latency; limited working volume & occlusion headroom.                   |
 | 4× U20CAM-9281M               | **MVCore3D + TDM**    |  **~45%** | Low-budget MJPEG; available now; good with **TDMStrobe**; high CPU (decode).                         |
 | 4× Leap Motion (Gen 1)        | **Leap2Pose**         |  **~42%** | Inexpensive; reliable range ~30–40 cm; more sensitive to occlusions.                                 |
