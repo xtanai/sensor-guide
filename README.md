@@ -1,11 +1,11 @@
 # 🎥 Recommended Sensor Options
 for 3D Hand-Tracking Reconstruction
 
----
+
 
 ## 📍 Five options integrated with MotionCoder:
 
----
+
 
 ### 1) **Budget-Optimized: MVCore3D**
 
@@ -14,7 +14,6 @@ for 3D Hand-Tracking Reconstruction
 * **Requirements:** **CPU:** ≥ **Ryzen 7 5700X / 7900** (or comparable Intel). **MJPEG** is CPU-heavy.
 * **Budget:** from **€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance** (BOM in [MVCore3D](https://github.com/xtanai/mvcore3d) and [TDMStrobe](https://github.com/xtanai/tdmstrobe))
 * **Note:** If camera costs exceed ~€200 (rare) or ~€800 (typical setups), **Leap Motion** can be a sensible alternative (see **Leap2Pose** below).
-* **Not recommended:** **Standard RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max** etc. (rolling shutter, auto exposure/gain, weak IR response) — fine for experiments, **unsuitable for precise hand tracking**. Also **depth solutions (LiDAR/ToF/active stereo, e.g., Intel RealSense, Kinect)** are often **unsuitable** for fine hand/finger tracking: **relatively expensive**, **lower/inconsistent FPS**, and **insufficient precision** for **parametric CAD commands**.
 * **Pros:** very inexpensive, immediately available, **occlusion-robust (4 viewpoints)**
 * **Cons:** **higher CPU load** (e.g., MJPEG decode), **more tuning** (exposure/sync), somewhat higher end-to-end latency, scaling limited by CPU
 
@@ -83,7 +82,13 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
+
+
+
+
 ## 📊 **Coarse Assessment of Optimal Sensor**
+
+**Not recommended:** **Standard RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max** etc. (rolling shutter, auto exposure/gain, weak IR response) — fine for experiments, **unsuitable for precise hand tracking**. Also **depth solutions (LiDAR/ToF/active stereo, e.g., Intel RealSense, Kinect)** are often **unsuitable** for fine hand/finger tracking: **relatively expensive**, **lower/inconsistent FPS**, and **insufficient precision** for **parametric CAD commands**.
 
 *relative to my CAD/DCC use case*
 
