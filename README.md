@@ -1,9 +1,10 @@
 # 🎥 Recommended Sensor Options
+
 for 3D Hand-Tracking Reconstruction
 
+**Short note — not recommended:** Standard **RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max**, etc. (rolling shutter, auto exposure/gain, weak IR response) are fine for experiments but **unsuitable for precise hand tracking**. Likewise, **depth solutions** (LiDAR/ToF/active stereo — e.g., Intel RealSense, Kinect) are often **ill-suited** to fine hand/finger work: **relatively expensive**, **lower/variable FPS**, and **insufficient precision** for **parametric CAD commands**.
 
-
-## 📍 Five options integrated with MotionCoder:
+## 📍 Five recommended options integrated with MotionCoder:
 
 
 
@@ -88,7 +89,7 @@ for 3D Hand-Tracking Reconstruction
 
 ## 📊 **Coarse Assessment of Optimal Sensor**
 
-**Not recommended:** **Standard RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max** etc. (rolling shutter, auto exposure/gain, weak IR response) — fine for experiments, **unsuitable for precise hand tracking**. Also **depth solutions (LiDAR/ToF/active stereo, e.g., Intel RealSense, Kinect)** are often **unsuitable** for fine hand/finger tracking: **relatively expensive**, **lower/inconsistent FPS**, and **insufficient precision** for **parametric CAD commands**.
+
 
 *relative to my CAD/DCC use case*
 
