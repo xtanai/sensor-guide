@@ -3,11 +3,26 @@ for 3D Hand-Tracking Reconstruction
 
 ## 📍 Three options integrated with MotionCoder:
 
-### 1) **Budget-Optimized: MVCore3D**
+### 1) **Budget-Optimized: MVCore3D or MVRaw3D**
 
-* **Stack:** **MMPose + Anipose + libjpeg-turbo**
+* **Stack:** **MMPose + Anipose**
+
+  * **MJPEG pipeline:** use **libjpeg-turbo** for fast decoding.
+  * **RAW (YUY2/Mono8):** **no** libjpeg-turbo required.
+
+* **Budget:** from **~€100** for **4× OV9281 (UVC)** + **TDMStrobe** — excellent **price/performance**.
+  BOMs: **[MVCore3D](https://github.com/xtanai/mvcore3d)**, **[TDMStrobe](https://github.com/xtanai/tdmstrobe)**
+
+* **Requirements:**
+
+  * **CPU:** at least **Ryzen 7 5700X / 7900** (or comparable Intel). **MJPEG** decoding is CPU-heavy.
+  * **RAW:** lower CPU load but **higher USB bandwidth** demand.
+  * **GPU (recommended):** **RTX 3060+** for pose inference.
+
+
+* **Stack:** **MMPose + Anipose + libjpeg-turbo** (if Raw, nothing libjpeg-turbo=). 
 * **Budget:** from **€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance** (BOM in [MVCore3D](https://github.com/xtanai/mvcore3d) and [TDMStrobe](https://github.com/xtanai/tdmstrobe))
-* **Requirements:** **strong CPU** (at least **Ryzen 7 5700X / 7900** or equivalent Intel)
+* **Requirements:** **strong CPU** (at least **Ryzen 7 5700X / 7900** or equivalent Intel) (if Raw, nothing strong CPU)
 * **Cameras:** Alternatively **USB3 global-shutter** with **trigger/strobe**; **recommendations & trade-offs** are listed in the **camera list** in the repo
 * **Note:** If camera costs exceed ~€200 (rare) or ~€800 (typical setups), **Leap Motion** can be a sensible alternative (see **Leap2Pose** below).
 * **Not recommended:** **Standard RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max** etc. (rolling shutter, auto exposure/gain, weak IR response) — fine for experiments, **unsuitable for precise hand tracking**. Also **depth solutions (LiDAR/ToF/active stereo, e.g., Intel RealSense, Kinect)** are often **unsuitable** for fine hand/finger tracking: **relatively expensive**, **lower/inconsistent FPS**, and **insufficient precision** for **parametric CAD commands**.
@@ -68,6 +83,7 @@ for 3D Hand-Tracking Reconstruction
 | Sensor                        | Integration Module    |   Level % | Notes                                                                                                   |
 | ----------------------------- | --------------------- | --------: | ------------------------------------------------------------------------------------------------------- |
 | 4× mono cams (global shutter) | **MVMono3D**          | **~100%** | Reference level; highly scalable (more cams/MP, PTZ with zoom/focus, strong GPU, sufficient bandwidth). |
+| 4× mono cams (global shutter) | **MVRaw3D**           |  **~75%** | Best             |
 | 4× Leap Motion Controller 2   | **Leap2Pose**         |  **~50%** | Good baseline for hand tracking; slightly limited scalability.                                          |
 | 4× U20CAM-9281M               | **MVCore3D + TDM**    |  **~45%** | Low-budget, immediately available; high CPU demand.                                                     |
 | 4× Leap Motion (Gen 1)        | **Leap2Pose**         |  **~42%** | Inexpensive, but reliable working distance only ~30–40 cm.                                              |
