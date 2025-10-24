@@ -19,8 +19,6 @@ for 3D Hand-Tracking Reconstruction
   * **RAW:** lower CPU load but **higher USB bandwidth** demand.
   * **GPU (recommended):** **RTX 3060+** for pose inference.
 
-
-* **Stack:** **MMPose + Anipose + libjpeg-turbo** (if Raw, nothing libjpeg-turbo=). 
 * **Budget:** from **€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance** (BOM in [MVCore3D](https://github.com/xtanai/mvcore3d) and [TDMStrobe](https://github.com/xtanai/tdmstrobe))
 * **Requirements:** **strong CPU** (at least **Ryzen 7 5700X / 7900** or equivalent Intel) (if Raw, nothing strong CPU)
 * **Cameras:** Alternatively **USB3 global-shutter** with **trigger/strobe**; **recommendations & trade-offs** are listed in the **camera list** in the repo
