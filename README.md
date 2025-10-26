@@ -53,7 +53,7 @@ for 3D Hand-Tracking Reconstruction
 * **Price ballpark:** **~€250** per device (new version) or from **~€15** (older version, used, EU)
 * **Note:** The **old version** typically reaches **up to ~60 cm**; the **new version** **up to ~110 cm**. With **4× sensors**, overlap and angles can **partially compensate** limitations.
 * **Pros:** **low latency**, **plug-and-play**
-* **Cons:** smaller working volume, **less scalable**, somewhat less occlusion-robust
+* **Cons:** Smaller working volume, **less scalable**, **no point cloud or face tracking**, somewhat less occlusion-robust.
 
 ---
 
@@ -78,7 +78,7 @@ for 3D Hand-Tracking Reconstruction
 
 **Pros / Cons**
 
-* **Pros:** **plug-and-play**, **high performance**, **very high occlusion robustness**, **high precision**, **very low latency**
+* **Pros:** **plug-and-play**, **high performance**, **point cloud with ROI and Pantomime**, **very high occlusion robustness**, **high precision**, **very low latency**
 * **Cons:** investment from **≈ €1,000** (cost-efficient for the results); **ToF** at comparable quality is often **> €10,000**
 
 ---
