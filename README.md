@@ -4,7 +4,7 @@ for 3D Hand-Tracking Reconstruction
 
 **Short note — not recommended:** Standard **RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max**, etc. (rolling shutter, auto exposure/gain, weak IR response) are fine for experiments but **unsuitable for precise hand tracking**. Likewise, **depth solutions** (LiDAR/ToF/active stereo — e.g., Intel RealSense, Kinect) are often **ill-suited** to fine hand/finger work: **relatively expensive**, **lower/variable FPS**, and **insufficient precision** for **parametric CAD commands**.
 
-## 📍 Five recommended options integrated with MotionCoder:
+## 📍 Six recommended options integrated with MotionCoder:
 
 
 ### 1) **Best Use: Pi5Track3D**
@@ -22,7 +22,7 @@ for 3D Hand-Tracking Reconstruction
 * **Stack:** **MMPose + Anipose**
 * **MJPEG pipeline:** Use **libjpeg-turbo** for fast decode.
 * **Requirements:** **CPU** ≥ **Ryzen 7 5700X / 7900** (or comparable Intel). **MJPEG** is CPU-heavy.
-* **Budget:** from **~€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance** (see BOM in [MVCore3D](https://github.com/xtanai/mvcore3d) and [TDMStrobe](https://github.com/xtanai/tdmstrobe)).
+* **Budget:** from **~€100** for **4× OV9281 (UVC)** + **TDMStrobe** — **best price/performance**.
 * **Pros:** Very inexpensive, immediately available, **occlusion-robust (4 viewpoints)**.
 * **Cons:** **Higher CPU load** (MJPEG decode), **more tuning** (exposure/sync), somewhat higher end-to-end latency; CPU limits scaling.
 
@@ -124,8 +124,3 @@ for 3D Hand-Tracking Reconstruction
 
 
 
----
-
-## 📷 Sensor Lists
-
-Coming soon.
