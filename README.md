@@ -117,7 +117,7 @@ for 3D Hand-Tracking Reconstruction
 | Myo armband / AIfES           |                     — |   **~5%** | Very limited suitability for this use case.                                                            |
 
 **Optimal path (target):**
-**Pi5Track3D with 8× mono cams + mini markers (wrist triangle + fingertips)** can deliver **>400%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
+**Pi5Track3D with 8× mono cams + small markers (wrist triangle + fingertips)** can deliver **>400%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
 
 *Notes:* Percentages are **use-case estimates** (precision, robustness, latency, occlusion tolerance, tunability) — **guidance**, not lab measurements.
 
