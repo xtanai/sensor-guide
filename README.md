@@ -85,7 +85,7 @@ for 3D Hand-Tracking Reconstruction
 **Pros / Cons**
 
 * **Pros:** **Plug-and-play**, **high performance**, **ROI point cloud**, **very high occlusion robustness**, **high precision**, **very low latency**
-* **Cons:** Investment from **≈ €1,000** (cost-effective for results); comparable ToF quality is often **> €10,000**
+* **Cons:** Investment from **≈ €2,000** (cost-effective for results); comparable ToF quality is often **> €10,000**
 
 ---
 
@@ -101,23 +101,23 @@ for 3D Hand-Tracking Reconstruction
 | Sensor                        |    Integration Module |   Level % | Notes                                                                                                  |
 | ----------------------------- | --------------------: | --------: | ------------------------------------------------------------------------------------------------------ |
 | 4× mono cams (global shutter) |    **MVMono3D + TDM** | **~100%** | Reference setup; highly scalable (more cams/MP), PTZ (zoom/focus), strong GPU, ample bandwidth.        |
-| 4× mono cams (global shutter) |        **Pi5Track3D** |  **~95%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
+| 4× mono cams (global shutter) |  **Pi5Track3D + TDM** |  **~90%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
 | 4× mono cams (global shutter) |     **MVRaw3D + TDM** |  **~70%** | RAW (Bayer/mono) pipeline; very low latency, high fidelity; needs HW sync and careful debayer/denoise. |
 | 4× mono cams (global shutter) |     **MVYUV3D + TDM** |  **~60%** | Uncompressed YUV (YUY2/UYVY/NV12); lower CPU than MJPEG, higher bus load; fix exposure/gain.           |
-| 4× Leap Motion Controller 2   |        **Leap2Pose**  |  **~50%** | Solid baseline; high FPS/low latency; limited working volume and occlusion headroom.                   |
+| 4× Leap Motion Controller 2   |         **Leap2Pose** |  **~50%** | Solid baseline; high FPS/low latency; limited working volume and occlusion headroom.                   |
 | 4× U20CAM-9281M               |    **MVCore3D + TDM** |  **~45%** | Low-budget MJPEG; available now; works with **TDM-strobe**; CPU load from decode.                      |
-| 4× Leap Motion (Gen 1)        |        **Leap2Pose**  |  **~42%** | Inexpensive; reliable range ~30–40 cm; more sensitive to occlusions.                                   |
-| 2× Leap Motion Controller 2   |        **Leap2Pose**  |  **~40%** | Good latency; stereo helps, but pose-dependent occlusion gaps remain.                                  |
+| 4× Leap Motion (Gen 1)        |         **Leap2Pose** |  **~42%** | Inexpensive; reliable range ~30–40 cm; more sensitive to occlusions.                                   |
+| 2× Leap Motion Controller 2   |         **Leap2Pose** |  **~40%** | Good latency; stereo helps, but pose-dependent occlusion gaps remain.                                  |
 | 4× U20CAM-9281M               | **MVCore3D (no TDM)** |  **~30%** | IR always on → crosstalk/blooming; softer edges; less stable reconstruction.                           |
 | 2× U20CAM-9281M               |    **MVCore3D + TDM** |  **~25%** | Stereo helps; without HW sync/MJPEG decode → fragile, less occlusion margin, higher CPU load.          |
-| 1× Leap Motion Controller 2   |        **Leap2Pose**  |  **~25%** | Very smooth but small volume; strongly pose/occlusion-dependent.                                       |
+| 1× Leap Motion Controller 2   |         **Leap2Pose** |  **~25%** | Very smooth but small volume; strongly pose/occlusion-dependent.                                       |
 | 4× Kinect / RealSense         |                     — |  **~20%** | Limited scalability/precision; unsuitable for precise finger/tool gestures.                            |
 | 4× high-quality RGB webcams   |  **MediaPipe / YOLO** |  **~10%** | Theoretically scalable; in practice blur/artifacts/latency for precise hands/tools.                    |
 | 1× Kinect / RealSense         |                     — |   **~7%** | Prototype playground; not for precise hand/tool gestures.                                              |
 | Myo armband / AIfES           |                     — |   **~5%** | Very limited suitability for this use case.                                                            |
 
 **Optimal path (target):**
-**Pi5Track3D with 8× mono cams + markers (wrist triangle + fingertips)** can deliver **>300%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
+**Pi5Track3D with 8× mono cams + mini markers (wrist triangle + fingertips)** can deliver **>400%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
 
 *Notes:* Percentages are **use-case estimates** (precision, robustness, latency, occlusion tolerance, tunability) — **guidance**, not lab measurements.
 
