@@ -101,7 +101,7 @@ for 3D Hand-Tracking Reconstruction
 | Sensor                        |    Integration Module |   Level % | Notes                                                                                                  |
 | ----------------------------- | --------------------: | --------: | ------------------------------------------------------------------------------------------------------ |
 | 4× mono cams (global shutter) |    **MVMono3D + TDM** | **~100%** | Reference setup; highly scalable (more cams/MP), PTZ (zoom/focus), strong GPU, ample bandwidth.        |
-| 4× mono cams (global shutter) |  **Pi5Track3D + TDM** |  **~90%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
+| 4× mono cams (global shutter) |  **Pi5Track3D + TDM** |  **~70%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
 | 4× mono cams (global shutter) |     **MVRaw3D + TDM** |  **~70%** | RAW (Bayer/mono) pipeline; very low latency, high fidelity; needs HW sync and careful debayer/denoise. |
 | 4× mono cams (global shutter) |     **MVYUV3D + TDM** |  **~60%** | Uncompressed YUV (YUY2/UYVY/NV12); lower CPU than MJPEG, higher bus load; fix exposure/gain.           |
 | 4× Leap Motion Controller 2   |         **Leap2Pose** |  **~50%** | Solid baseline; high FPS/low latency; limited working volume and occlusion headroom.                   |
