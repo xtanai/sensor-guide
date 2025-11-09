@@ -11,7 +11,7 @@ for 3D Hand-Tracking Reconstruction
 
 * **What it is:** On-edge **RAW10 mono ingest** on Raspberry Pi 5 with **GPU/NEON-optimized preproc** (undistort/normalize); optional on-Pi keypoints; stream to host for triangulation.
 * **When to choose:** You want **deterministic low-latency ingest** and to offload decode/preproc from the PC; great for **4–8 cams** at 60–120 FPS.
-* **Requirements:** **Raspberry Pi 5 (4/8 GB)**, 2× MIPI-CSI (e.g., OV9281), NVMe or USB-to-2.5GbE; **HW trigger** recommended.
+* **Requirements:** **Raspberry Pi 5 (4/8 GB)**, 2× MIPI-CSI (e.g., OV9281), NVMe; **HW trigger** recommended.
 * **Pros:** **Low latency**, predictable timing, **CPU offload** on host, scalable.
 * **Cons:** Needs Pi-side integration (cabling, sync, enclosure); RAW pipeline setup is more involved than UVC.
 
@@ -66,7 +66,7 @@ for 3D Hand-Tracking Reconstruction
 
 ### 6) **High-Performance: MVMono3D**
 
-* **What it is:** True **synchronized mono multi-view** (Mono8/RAW10), **HW trigger/sync**, high-precision geometry pipeline — **without** expensive ToF.
+* **What it is:** True **synchronized mono multi-view** with RAW12, **HW trigger/sync**, high-precision geometry pipeline — **without** expensive ToF.
 * **AI-assisted geometry** to reduce **occlusions** and boost quality.
 
 **Core building blocks**
