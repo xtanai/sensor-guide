@@ -4,6 +4,25 @@ for 3D Hand-Tracking Reconstruction
 
 **Short note — not recommended:** Standard **RGB webcams**, **Meta Quest 3**, **iPhone 15 Pro Max**, etc. (rolling shutter, auto exposure/gain, weak IR response) are fine for experiments but **unsuitable for precise hand tracking**. Likewise, **depth solutions** (LiDAR/ToF/active stereo — e.g., Intel RealSense, Kinect) are often **ill-suited** to fine hand/finger work: **relatively expensive**, **lower/variable FPS**, and **insufficient precision** for **parametric CAD commands**.
 
+
+## 📷 Key sensor parameters
+
+* **Shutter:** **Global shutter** (✅). **Rolling shutter** (❌ not recommended).
+* **Sync/Trigger I/O:** **Required.** Must support external sync/trigger (driven by our MCU / TDM controller).
+* **Pixel format:** **RAW10** or **RAW12** (both ideal). **RAW12** improves quantization but increases bandwidth/compute.
+* **Sensor size:** Prefer **1/4"** (cost/size). Optional: **1/3"** or **1/2"** for more light & optics flexibility (higher cost/optics).
+* **Frame rate:** **≥120 FPS** target; **≥60 FPS** acceptable for early development.
+* **Resolution:** **≥1280×800** minimum. Higher (≥2 MP) only if your pipeline can handle **RAW12** and added processing.
+* **Spectral/Optics:** **CMOS without IR-cut**; use an **850 nm band-pass filter** with appropriate NIR illumination.
+* **Interface (priority):**
+
+  1. **MIPI-CSI** (RPi 5 compatible). Short cables—place MCU near sensors; bridge/fan-out via TDM as needed.
+  2. **USB3 Vision** (good, but cable length limited without active extenders).
+  3. **GigE Vision (≥2.5 GbE)** robust for longer runs;
+     **SFP+** would be ideal but requires custom engineering (not commonly available off-the-shelf).
+* **FOV:** **60–120°**, selected per rig geometry and working distance (see [**Vision Geometry Rules**](https://github.com/xtanai/geo_rules) ).
+
+
 ## 📍 Six recommended options integrated with MotionCoder:
 
 
