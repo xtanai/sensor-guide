@@ -24,7 +24,7 @@ for 3D Hand-Tracking Reconstruction
 * **FOV:** **60–120°**, selected per rig geometry and working distance (see [**Vision Geometry Rules**](https://github.com/xtanai/geo_rules) ).
 
 
-## 📍 Six recommended options integrated with MotionCoder:
+## 📍 Five recommended options integrated with MotionCoder:
 
 
 ### 1) **Best Use: Pi5Track3D**
@@ -71,20 +71,7 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
-### 5) **Comfort: Leap2Pose**
-
-* **Stack:** **LeapC**
-* **4× Leap Motion Controller** in a rigid frame, properly aligned → **works very well** with MotionCoder.
-  **2× Leap** → **works** with limitations (being optimized).
-  **1× Leap** → **limited**; robust, adapted gestures provided.
-* **Price ballpark:** **~€250** per device (new) or from **~€15** (older, used, EU).
-* **Note:** Older units typically reach **~60 cm**; newer **~110 cm**. With **4× sensors**, overlap/angles can **partially compensate** limitations.
-* **Pros:** **Low latency**, **plug-and-play**.
-* **Cons:** Smaller working volume, **less scalable**, no point cloud/face tracking, less occlusion-robust.
-
----
-
-### 6) **High-Performance: MVMono3D**
+### 5) **High-Performance: MVMono3D**
 
 * **What it is:** True **synchronized mono multi-view** with RAW12, **HW trigger/sync**, high-precision geometry pipeline — **without** expensive ToF.
 * **AI-assisted geometry** to reduce **occlusions** and boost quality.
@@ -124,9 +111,9 @@ for 3D Hand-Tracking Reconstruction
 | 4× mono cams (global shutter) |  **Pi5Track3D + TDMStrobe** |  **~70%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
 | 4× mono cams (global shutter) |     **MVRAW3D + TDMStrobe** |  **~70%** | RAW (Bayer/mono) pipeline; very low latency, high fidelity; needs HW sync and careful debayer/denoise. |
 | 4× mono cams (global shutter) |     **MVYUV3D + TDMStrobe** |  **~60%** | Uncompressed YUV (YUY2/UYVY/NV12); lower CPU than MJPEG, higher bus load; fix exposure/gain.           |
-| 4× Leap Motion Controller 2   |         **Leap2Pose**       |  **~50%** | Solid baseline; high FPS/low latency; limited working volume and occlusion headroom.                   |
+| 4× Leap Motion Controller 2   |         **Leap2Pose**       |  **~50%** | High FPS/low latency; limited working volume and occlusion headroom.                                   |
 | 4× U20CAM-9281M               |    **MVCore3D + TDMStrobe** |  **~45%** | Low-budget MJPEG; available now; works with **TDMStrobe**; CPU load from decode.                       |
-| 4× Leap Motion (Gen 1)        |         **Leap2Pose**       |  **~42%** | Inexpensive; reliable range ~30–40 cm; more sensitive to occlusions.                                   |
+| 4× Leap Motion Controller 1   |         **Leap2Pose**       |  **~40%** | Inexpensive; reliable range ~30–40 cm; more sensitive to occlusions.                                   |
 | 2× Leap Motion Controller 2   |         **Leap2Pose**       |  **~40%** | Good latency; stereo helps, but pose-dependent occlusion gaps remain.                                  |
 | 4× U20CAM-9281M               | **MVCore3D (no TDMStrobe)** |  **~30%** | IR always on → crosstalk/blooming; softer edges; less stable reconstruction.                           |
 | 2× U20CAM-9281M               |    **MVCore3D + TDMStrobe** |  **~25%** | Stereo helps; without HW sync/MJPEG decode → fragile, less occlusion margin, higher CPU load.          |
