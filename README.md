@@ -20,7 +20,7 @@ for 3D Hand-Tracking Reconstruction
   1. **MIPI-CSI** (RPi 5 compatible). Short cables—place MCU near sensors; bridge/fan-out via TDM as needed.
   2. **USB3 Vision** (good, but cable length limited without active extenders).
   3. **GigE Vision (≥2.5 GbE)** robust for longer runs;
-     **SFP+** would be ideal but requires custom engineering (not commonly available off-the-shelf).
+     **SFP+** would be ideal for very high bandwidth, but requires custom engineering and is rarely available off the shelf. **CoaXPress** offers the best performance, but is significantly more expensive.
 * **FOV:** **60–120°**, selected per rig geometry and working distance (see [**Vision Geometry Rules**](https://github.com/xtanai/geo_rules) ).
 
 
