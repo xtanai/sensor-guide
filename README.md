@@ -7,7 +7,7 @@ for 3D Hand-Tracking Reconstruction
 
 ## 📷 Key sensor parameters
 
-* **Type:** **Monochrome sensors only** (✅).  **Color** (❌ not recommended).
+* **Type:** **Monochrome sensors only** (✅).  **RGB-Color** (❌ not recommended).
 * **Shutter:** **Global shutter** (✅). **Rolling shutter** (❌ not recommended).
 * **Sync/Trigger I/O:** **Required.** Must support external sync/trigger (driven by our MCU / TDM controller).
 * **Pixel format:** **RAW10** or **RAW12** (both ideal). **RAW12** improves quantization but increases bandwidth/compute.
