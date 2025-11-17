@@ -6,7 +6,7 @@ for 3D Hand-Tracking Reconstruction
 
 ---
 
-## 📷 Key sensor parameters (refined, English)
+## 📷 Key sensor parameters
 
 * **Type**
 
