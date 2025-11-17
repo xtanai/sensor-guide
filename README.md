@@ -30,6 +30,13 @@ for 3D Hand-Tracking Reconstruction
   * ❌ **MJPEG** or full **YUV color formats** – only for preview/debug, **not** for the main 3D/measurement pipeline.
   * **RAW12** offers better quantization (more effective intensity/depth levels), at the cost of higher bandwidth and compute.
   * **Fallback:** **RAW8 / Y8** is acceptable for low-cost / low-bandwidth prototypes.
+ 
+* **Spectral / optics**
+
+  * ✅ **CMOS without IR-cut filter** – full NIR sensitivity.
+  * ❌ **IR-cut filter** – not recommended; it blocks most NIR light and severely reduces signal at 850 
+  * Use an **850 nm band-pass filter** with matching NIR illumination (LED/VCSEL).
+  * Goal: stable contrast in NIR, robust against visible-light textures, colors, and ambient light.
 
 * **Sensor size**
 
@@ -48,13 +55,6 @@ for 3D Hand-Tracking Reconstruction
 
     * your full pipeline can handle **RAW10/RAW12** at higher bandwidth, and
     * the additional compute load (stereo matching / pose estimation) is planned for.
-
-* **Spectral / optics**
-
-  * ✅ **CMOS without IR-cut filter** – full NIR sensitivity.
-  * ❌ **IR-cut filter** – not recommended; it blocks most NIR light and severely reduces signal at 850 
-  * Use an **850 nm band-pass filter** with matching NIR illumination (LED/VCSEL).
-  * Goal: stable contrast in NIR, robust against visible-light textures, colors, and ambient light.
 
 * **Interface priority**
 
