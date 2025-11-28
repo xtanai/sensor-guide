@@ -192,6 +192,18 @@ for 3D Hand-Tracking Reconstruction
 | 1× Kinect / RealSense         |                     —       |   **~7%** | Prototype playground; not for precise hand/tool gestures.                                              |
 | Myo armband / AIfES           |                     —       |   **~5%** | Very limited suitability for this use case.                                                            |
 
+> **Note – Leap Motion internals (v1 vs v2)**  
+> Both Leap Motion generations are internally small stereo rigs with **2× monochrome IR cameras + IR-LEDs**.  
+> 
+> * **Leap Motion Controller 1** uses lower-resolution IR sensors (roughly VGA-class) at up to **120 fps** with a very wide FOV. Tracking volume is ~30–40 cm above the device and quite sensitive to occlusions and hand pose.  
+> * **Leap Motion Controller 2** upgrades to **higher-resolution global-shutter IR sensors** (≈1–2 MP per camera, 90–120 fps depending on mode) with better SNR and calibration, giving smoother, more stable hand skeletons and slightly more usable working volume.  
+> 
+> Both devices operate in the **near-IR band (~850 nm)** and contain **two mono IR cameras**, but the official SDK does not expose raw camera frames; in this stack they are treated as “black-box pose sensors” rather than generic stereo cameras. For precise CAD/DCC gesture control, Leap v2 is clearly preferable, while Leap v1 remains useful as a cheap, small-volume reference device.  
+> 
+> A major drawback, however, is multi-rig scaling: combining **2–5 Leap devices** in one setup works only poorly in practice, because exposure, gain and timing are not truly synchronized across units and are tightly controlled by the vendor software. This makes it very hard to build a clean, deterministic multi-view geometry pipeline on top of them.
+
+
+
 **Optimal path (target):**
 **Pi5Track3D with 8× mono cams + small markers (wrist triangle + fingertips)** can deliver **>400%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
 
