@@ -96,7 +96,7 @@ for 3D Hand-Tracking Reconstruction
 ## 📍 Five recommended options integrated with MotionCoder:
 
 
-### 1) **Best Use: Pi5Track3D**
+### 1) **Best Use: EdgeTrack**
 
 * **What it is:** On-edge **RAW10 mono ingest** on Raspberry Pi 5 with **GPU/NEON-optimized preproc** (undistort/normalize); optional on-Pi keypoints; stream to host for triangulation.
 * **When to choose:** You want **deterministic low-latency ingest** and to offload decode/preproc from the PC; great for **4–8 cams** at 60–120 FPS.
@@ -177,7 +177,7 @@ for 3D Hand-Tracking Reconstruction
 | Sensor                        |    Integration Module       |   Level % | Notes                                                                                                  |
 | ----------------------------- | --------------------------: | --------: | ------------------------------------------------------------------------------------------------------ |
 | 4× mono cams (global shutter) |    **MVMono3D + TDMStrobe** | **~100%** | Reference setup; highly scalable (more cams/MP), PTZ (zoom/focus), strong GPU, ample bandwidth.        |
-| 4× mono cams (global shutter) |  **Pi5Track3D + TDMStrobe** |  **~70%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
+| 4× mono cams (global shutter) |  **EdgeTrack + TDMStrobe**  |  **~70%** | Pi 5 capture/stream; good SNR/latency with GS+NIR; watch PCIe/USB and network headroom.                |
 | 4× mono cams (global shutter) |     **MVRAW3D + TDMStrobe** |  **~70%** | RAW (Bayer/mono) pipeline; very low latency, high fidelity; needs HW sync and careful debayer/denoise. |
 | 4× mono cams (global shutter) |     **MVYUV3D + TDMStrobe** |  **~60%** | Uncompressed YUV (YUY2/UYVY/NV12); lower CPU than MJPEG, higher bus load; fix exposure/gain.           |
 | 4× Leap Motion Controller 2   |         **Leap2Pose**       |  **~50%** | High FPS/low latency; limited working volume and occlusion headroom.                                   |
@@ -205,7 +205,7 @@ for 3D Hand-Tracking Reconstruction
 
 
 **Optimal path (target):**
-**Pi5Track3D with 8× mono cams + small markers (wrist triangle + fingertips)** can deliver **>400%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
+**EdgeTrack with 8× mono cams + small markers (wrist triangle + fingertips)** can deliver **>400%** of the reference baseline in **precision/robustness**, given proper **GS+NIR**, **TDM strobes**, and **tight calibration**.
 
 *Notes:* Percentages are **use-case estimates** (precision, robustness, latency, occlusion tolerance, tunability) — **guidance**, not lab measurements.
 
