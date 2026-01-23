@@ -12,6 +12,7 @@ for 3D Hand-Tracking Reconstruction
 
   * ✅ **Monochrome sensors (preferred)** – maximum sharpness, no Bayer debayering, better NIR sensitivity.
   * ❌ **RGB color** – for debugging/visualization only; not recommended for precise 3D reconstruction.
+  * *Note:* An **RGB camera placed between two mono cameras** can still be useful as an auxiliary channel for **calibration support** and **texture/context cues** (without driving the core 3D reconstruction).
 
 * **Shutter**
 
