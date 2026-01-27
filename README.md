@@ -24,6 +24,7 @@ for 3D Hand-Tracking Reconstruction
   * ✅ **Required.** The sensor **must** support external sync/trigger (input/output), driven by our MCU / TDM controller.
   * ❌ **No trigger support** – not acceptable for this project.
   * Goal: **frame-accurate synchronization** of all cameras in the rig.
+  * *Nice to have:* a STROBE / exposure-active output that can be used as a hardware feedback signal (trigger accepted / exposure occurred).
 
 * **Pixel format**
 
