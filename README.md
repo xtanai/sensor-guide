@@ -60,7 +60,7 @@ for 3D Hand-Tracking Reconstruction
 
 * **Interface priority**
 
-  1. **MIPI-CSI** (RPi 5 compatible)
+  1. **MIPI-CSI2** (RPi 5 compatible)
      → Short flex cables, compute module close to the sensors; TDM/multiplexer for multi-camera setups if needed.
   2. **USB3 Vision**
      → Good for single industrial cameras; cable length limited without active extenders/repeaters.
