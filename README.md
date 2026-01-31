@@ -60,16 +60,19 @@ for 3D Hand-Tracking Reconstruction
 
 * **Interface priority**
 
-  1. **MIPI-CSI2** (RPi 5 compatible)
-     → Short flex cables, compute module close to the sensors; TDM/multiplexer for multi-camera setups if needed.
-  2. **USB3 Vision**
-     → Good for single industrial cameras; cable length limited without active extenders/repeaters.
-  3. **GigE Vision (≥ 2.5 GbE)**
-     → Robust over longer distances; PoE possible; scales well for industrial rigs.
-  4. **SFP+**
-     → Ideal for very high bandwidth and long distances, but requires custom hardware and is rarely “off-the-shelf”.
-  5. **CoaXPress**
-     → Technically top tier (bandwidth, latency, cable length), but significantly more expensive and complex.
+  * 🎯 **Lowest latency / best determinism: MIPI-CSI**
+    → Short FFC/flex cables; place the compute module close to the sensors. For multi-camera rigs, use TDM or a CSI multiplexer if needed.
+
+  * **Alternatives (valid, but not my primary use case):**
+
+    * **USB3 Vision**
+      → Good for single industrial cameras; cable length is limited without active extenders/repeaters.
+    * **GigE Vision (≥ 2.5 GbE)**
+      → Robust over longer distances; PoE possible; scales well for distributed/industrial rigs.
+    * **SFP+**
+      → Great for very high bandwidth and long runs, but typically requires custom hardware and is rarely fully off-the-shelf.
+    * **CoaXPress**
+      → Top-tier on bandwidth, latency, and cable length, but significantly more expensive and complex to integrate.
 
 * **Field of View (FOV)**
 
