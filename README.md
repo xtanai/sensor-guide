@@ -104,7 +104,7 @@ Below is a simplified engineering comparison:
 
 | Interface              | Additional Chips | RAW Access | Latency | Determinism |
 | ---------------------- | ---------------- | ---------- | ------- | ----------- |
-| **MIPI CSI-2**         | ⭐ very few       | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐       |
+| **MIPI CSI-2**         | very few       | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐       |
 | **USB**                | medium           | ⭐⭐         | ⭐⭐⭐     | ⭐⭐          |
 | **GigE / GigE Vision** | many             | ⭐⭐⭐        | ⭐⭐⭐     | ⭐⭐⭐⭐        |
 
