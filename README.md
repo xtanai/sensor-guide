@@ -58,7 +58,7 @@ for 3D Hand-Tracking Reconstruction
     * your full pipeline can handle **RAW10/RAW12** at higher bandwidth, and
     * the additional compute load (stereo matching / pose estimation) is planned for.
 
-* **Interface priority**
+* **Interface**
 
   * 🎯 **Lowest latency / best determinism: MIPI-CSI**
     → Short FFC/flex cables; place the compute module close to the sensors. For multi-camera rigs, use TDM or a CSI multiplexer if needed.
