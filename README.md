@@ -92,8 +92,8 @@ for 3D Hand-Tracking Reconstruction
 | **MJPEG / JPEG**           | ⭐☆☆☆☆☆ | Only for preview/debug. Strong artifacts, variable bitrate, poor for precise 3D.         |
 | **YUV / YUYV / NV12**      | ⭐⭐☆☆☆☆ | OK if you only use the **Y (luma)** channel. Extra bandwidth wasted on color info.       |
 | **RAW8 / Y8 (8-bit mono)** | ⭐⭐⭐☆☆☆ | Solid baseline. Lower dynamic range, but good enough with proper NIR illumination.       |
-| **RAW10**                  | ⭐⭐⭐⭐⭐☆ | Very good: higher dynamic range, finer quantization, still manageable bandwidth.         |
-| **RAW12**                  | ⭐⭐⭐⭐⭐⭐ | Ideal for high precision: maximum dynamic range and depth resolution, highest bandwidth. |
+| **RAW10**                  | ⭐⭐⭐⭐☆ | Very good: higher dynamic range, finer quantization, still manageable bandwidth.         |
+| **RAW12**                  | ⭐⭐⭐⭐⭐ | Ideal for high precision: maximum dynamic range and depth resolution, highest bandwidth. |
 
 ---
 
@@ -105,8 +105,8 @@ Below is a simplified engineering comparison:
 | Interface              | Additional Chips | RAW Access | Latency | Determinism |
 | ---------------------- | ---------------- | ---------- | ------- | ----------- |
 | **MIPI CSI-2**         | very few       | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐       |
-| **USB**                | medium           | ⭐⭐         | ⭐⭐⭐     | ⭐⭐          |
-| **GigE / GigE Vision** | many             | ⭐⭐⭐        | ⭐⭐⭐     | ⭐⭐⭐⭐        |
+| **USB**                | medium           | ⭐⭐☆☆☆         | ⭐⭐⭐☆☆     | ⭐⭐☆☆☆          |
+| **GigE / GigE Vision** | many             | ⭐⭐⭐☆☆       | ⭐⭐⭐☆☆     | ⭐⭐⭐⭐☆        |
 
 ### Summary
 
