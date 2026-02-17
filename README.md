@@ -95,6 +95,32 @@ for 3D Hand-Tracking Reconstruction
 | **RAW10**                  | ★★★★☆☆ | Very good: higher dynamic range, finer quantization, still manageable bandwidth.         |
 | **RAW12**                  | ★★★★★★ | Ideal for high precision: maximum dynamic range and depth resolution, highest bandwidth. |
 
+---
+
+## ⚙️ Quick Engineering Comparison — What is the best interface for deterministic vision?
+
+When designing a machine-vision or stereo system, the choice of sensor interface has a strong impact on latency, control, and system complexity.
+Below is a simplified engineering comparison:
+
+| Interface              | Additional Chips | RAW Access | Latency | Determinism |
+| ---------------------- | ---------------- | ---------- | ------- | ----------- |
+| **MIPI CSI-2**         | ⭐ very few       | ⭐⭐⭐⭐⭐      | ⭐⭐⭐⭐⭐   | ⭐⭐⭐⭐⭐       |
+| **USB**                | medium           | ⭐⭐         | ⭐⭐⭐     | ⭐⭐          |
+| **GigE / GigE Vision** | many             | ⭐⭐⭐        | ⭐⭐⭐     | ⭐⭐⭐⭐        |
+
+### Summary
+
+**MIPI CSI-2** is typically the best choice when deterministic timing, minimal latency, and direct RAW sensor access are required. The sensor is connected almost directly to the SoC, which reduces hidden processing stages and keeps the pipeline transparent.
+
+**USB cameras** usually include additional ISP and bridge chips. They are convenient and plug-and-play, but often introduce internal processing and buffering that reduce determinism.
+
+**GigE cameras** are powerful for industrial networking and long cable distances, but typically require more intermediate logic (FPGA/ASIC, packetization, buffering), which increases system complexity.
+
+For edge-processing architectures focused on precise timing and reproducible results, **MIPI CSI-2 provides the most transparent and controllable capture path**.
+
+---
+
+
 
 
 
