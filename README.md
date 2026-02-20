@@ -101,12 +101,13 @@ for 3D Hand-Tracking Reconstruction
 When designing a machine-vision or stereo system, the choice of sensor interface has a strong impact on latency, control, and system complexity.
 Below is a simplified engineering comparison:
 
-| Interface              | Additional Chips | RAW Access |    Latency   |  Determinism  |
-| ---------------------- | ---------------- | ---------- | ------------ | ------------- |
-| **MIPI CSI-2**         | very few         | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐    |
-| **USB**                | medium           | ⭐⭐☆☆☆    | ⭐⭐⭐☆☆    | ⭐⭐☆☆☆       |
-| **GigE / GigE Vision** | many             | ⭐⭐⭐☆☆   | ⭐⭐⭐☆☆    | ⭐⭐⭐⭐☆     |
-| **CoaXPress**          | heavy            | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐    |
+| Interface              | Additional Chips / Infra | RAW Access | Latency     | Determinism |
+| ---------------------- | ------------------------ | ---------- | ----------- | ---------- |
+| **MIPI CSI-2**         | very few                 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
+| **USB2 (typical UVC)** | medium                   | ⭐☆☆☆☆     | ⭐⭐☆☆☆     | ⭐☆☆☆☆     |
+| **USB3 (typical UVC)** | medium                   | ⭐⭐☆☆☆    | ⭐⭐⭐☆☆   | ⭐⭐☆☆☆     |
+| **GigE / GigE Vision** | many                     | ⭐⭐⭐⭐☆  | ⭐⭐⭐☆☆   | ⭐⭐⭐⭐☆  |
+| **CoaXPress**          | heavy (framegrabber)     | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
 
 ### Summary
 
