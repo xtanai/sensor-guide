@@ -147,7 +147,7 @@ From a system perspective, this direction is realistic: a RAW-first camera path 
 
 The main challenge is not “extra chips” - it’s **reliable module sourcing**, **mechanical integration**, **QC**, and **calibration**. That’s exactly what demand validation helps unlock.
 
-Based on current assumptions, I estimate sensor/module cost can be kept below **~€100 per unit**, but this depends heavily on volume. Reaching stable pricing and supply typically requires a meaningful production run (on the order of **~1,000 units**).
+Based on current assumptions, I estimate the sensor/module cost can be kept below **~€100 per unit**, but this depends heavily on volume. In many cases, a **MIPI CSI-2** camera path can be **significantly cheaper than typical USB webcams**, because the electronics BOM is often leaner (fewer bridge/ISP components and a more direct sensor-to-SoC connection). Achieving stable pricing and supply, however, usually requires a meaningful production run (on the order of **~1,000 units**).
 
 ### Vote / Demand Signal (Call to Action)
 
