@@ -61,7 +61,6 @@ for 3D Hand-Tracking Reconstruction
 * **Interface**
 
   * 🎯 **Lowest latency / best determinism: MIPI-CSI**
-    → Short FFC/flex cables; place the compute module close to the sensors. For multi-camera rigs, use TDM or a CSI multiplexer if needed.
 
   * **Alternatives (valid, but not my primary use case):**
 
