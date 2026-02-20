@@ -122,7 +122,7 @@ For edge-processing architectures focused on precise timing and reproducible res
 
 ---
 
-## Mono Sensors on the Market (MIPI CSI-2)
+## 🧭 Mono Sensors on the Market (MIPI CSI-2)
 
 For **mono global-shutter stereo with hardware trigger** on Raspberry Pi (MIPI CSI-2), there are only **a few** affordable and widely available options. The most accessible and practical modules today are typically based on **OV9281**, **Sony IMX296LLR**, and **onsemi AR0145**. These sensors are common in the Raspberry Pi ecosystem and work well for early development, prototyping, and validation.
 
@@ -131,21 +131,15 @@ For **mono global-shutter stereo with hardware trigger** on Raspberry Pi (MIPI C
 
 The current prototype uses OV9281-, IMX296LLR, AR0145-based modules, currently configured with a **limited CSI-2 lane setup**. This is ideal for development and validation, but it does **not fully utilize** the Raspberry Pi 5’s available CSI bandwidth and leaves less headroom for higher-throughput capture modes.
 
----
-
 ### Long-Term Goal: Higher-Bandwidth RAW Sensors (Transparent Capture Path)
 
 For the next generation, I’m targeting a **RAW-first sensor path** with **transparent, deterministic control**—meaning no opaque or mandatory processing stages in the capture chain. The goal is to take full advantage of **4-lane CSI-2 on Raspberry Pi 5**, increasing throughput and leaving more headroom for advanced modes and future upgrades.
 
 Securing the right sensor/module partner is feasible—but it depends on **validated demand**.
 
----
-
 ### Open, Repeatable Platform (MotionCoder-first)
 
 This is not meant to be closed or exclusive. The platform should remain **repeatable and widely adoptable**, because the long-term value sits in the software layer—**MotionCoder**—which benefits most from a broadly available, standardized capture backend.
-
----
 
 ### Feasibility & Manufacturing Reality
 
@@ -154,8 +148,6 @@ From a system perspective, this direction is realistic: a RAW-first camera path 
 The main challenge is not “extra chips” - it’s **reliable module sourcing**, **mechanical integration**, **QC**, and **calibration**. That’s exactly what demand validation helps unlock.
 
 Based on current assumptions, I estimate sensor/module cost can be kept below **~€100 per unit**, but this depends heavily on volume. Reaching stable pricing and supply typically requires a meaningful production run (on the order of **~1,000 units**).
-
----
 
 ### Vote / Demand Signal (Call to Action)
 
