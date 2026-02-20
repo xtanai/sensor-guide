@@ -106,6 +106,7 @@ Below is a simplified engineering comparison:
 | **MIPI CSI-2**         | very few         | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐    |
 | **USB**                | medium           | ⭐⭐☆☆☆    | ⭐⭐⭐☆☆    | ⭐⭐☆☆☆       |
 | **GigE / GigE Vision** | many             | ⭐⭐⭐☆☆   | ⭐⭐⭐☆☆    | ⭐⭐⭐⭐☆     |
+| **CoaXPress**          | heavy            | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐  | ⭐⭐⭐⭐⭐    |
 
 ### Summary
 
