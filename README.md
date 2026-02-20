@@ -43,7 +43,7 @@ for 3D Hand-Tracking Reconstruction
 * **Sensor size**
 
   * 🎯 Preferred: **1/4"** – good trade-off between cost, size, and lens availability.
-  * Optional: **1/3"** or **1/2"** – more light, better SNR, more optical flexibility, but higher cost and larger form factor.
+  * Optional: **~1/2.5"** – more light, better SNR, more optical flexibility, but higher cost and larger form factor.
 
 * **Frame rate**
 
