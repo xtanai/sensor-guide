@@ -39,6 +39,7 @@ for 3D Hand-Tracking Reconstruction
   * ❌ **IR-cut filter** – not recommended; it blocks most NIR light and severely reduces signal at 850 
   * Use an **850 nm band-pass filter** with matching NIR illumination (LED/VCSEL).
   * Goal: stable contrast in NIR, robust against visible-light textures, colors, and ambient light.
+  * Optional: If **specular reflections** become an issue, consider using a **polarizer** (only helps in certain geometries and may reduce overall signal).
 
 * **Sensor size**
 
