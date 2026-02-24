@@ -124,6 +124,61 @@ For edge-processing architectures focused on precise timing and reproducible res
 
 ---
 
+## 📷 Recommended sensors (available modules)
+
+Below are practical, readily available **global-shutter** camera modules that work well for NIR / tracking / stereo on Raspberry Pi (CSI-2 MIPI).
+
+> **Lens note:** Very wide lenses (e.g. **130°**) are usually **not recommended** for stereo/tracking because they reduce per-pixel energy (darker image), increase distortion, and make illumination harder.  
+> For most setups, **~70–80° FoV** is a good starting point (depending on working distance and baseline).
+
+### ⚡ Up to ~120 FPS (1 MP class)
+
+**OV9281 (1 MP) mono global shutter**
+- MyBotShop (ArduCAM OV9281, 130° lens)  
+  [Link](https://www.mybotshop.de/ArduCAM-1MP-OV9281-Mono-Global-Shutter-130deg-M12)
+  **Note:** The included **130° lens is not recommended** → swap to **~70–80°** FoV if possible.
+- Inno-Maker OV9281 module  
+   [Link](https://www.inno-maker.com/product/cam-mipiov9281/)
+- Inno-Maker OV9281 RAW v2  
+   [Link](https://www.inno-maker.com/product/cam-mipi9281raw-v2/)
+
+**Why OV9281?**
+- Very common in stereo / tracking projects
+- Good mode support and high frame rates (depending on ROI / sensor modes)
+- Mono + no IR-cut options available on many modules
+
+### 🧠 Up to ~60 FPS (higher resolution)
+
+**OV2311 (2 MP) mono global shutter**
+- ArduCAM OV2311 for Raspberry Pi  
+  [Link](https://www.arducam.com/arducam-ov2311-mipi-2mp-mono-global-shutter-camera-module-for-raspberry-pi.html)
+
+**IMX296 (1.58 MP) global shutter**
+- ArduCAM IMX296 (color) module  
+  https://www.arducam.com/1-58mp-imx296-color-global-shutter-camera-module-with-m12-lens-for-raspberry-pi.html)
+- Inno-Maker IMX296 RAW + trigger variant  
+  Link](https://www.inno-maker.com/product/cam-mipi296raw-trigger/)
+
+**Why these?**
+- Higher resolution than OV9281
+- Useful when you want more spatial detail and can accept lower max FPS
+
+### 🧩 Other / stereo kits (caution)
+
+**ArduCAM dual OV9281 wide-angle stereo kit**
+-  [Link](https://www.arducam.com/arducam-1mp2-wide-angle-stereo-camera-for-raspberry-pi-jetson-nano-and-xavier-nx-dual-ov9281-monochrome-global-shutter-camera-module.html)
+
+⚠️ **Note:** This kit is often **not ideal** for synchronized IR strobe / trigger use-cases, because it does **not provide a proper external trigger/strobe interface** (depends on variant).  
+For time-multiplexed strobing (TDM) you typically want modules with **trigger input** or a well-defined sync mechanism.
+
+### 💡 General advice
+- Prefer **mono + no IR-cut** for 850 nm NIR illumination.
+- Prefer camera modules with **trigger/sync support** if you plan IR strobes (especially TDM).
+- Plan lens FoV together with your illumination: **wide FoV = more LED power needed**.
+
+
+---
+
 ## 🧭 Mono Sensors on the Market (MIPI CSI-2)
 
 For **mono global-shutter stereo with hardware trigger** on Raspberry Pi (MIPI CSI-2), there are only **a few** affordable and widely available options. The most accessible and practical modules today are typically based on **OV9281**, **Sony IMX296LLR**, and **onsemi AR0145**. These sensors are common in the Raspberry Pi ecosystem and work well for early development, prototyping, and validation.
