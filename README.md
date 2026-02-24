@@ -158,10 +158,11 @@ Below are practical, readily available **global-shutter** camera modules that wo
   [Link](https://www.arducam.com/1-58mp-imx296-mono-global-shutter-camera-module-with-m12-lens-for-raspberry-pi.html)
 - Inno-Maker IMX296 RAW + trigger variant  
   [Link](https://www.inno-maker.com/product/cam-mipi296raw-trigger/)
-
+  
 **Why these?**
-- Higher resolution than OV9281
-- Useful when you want more spatial detail and can accept lower max FPS
+- Higher resolution compared to OV9281
+- Larger optical format than typical 1/4" sensors (better light collection per frame)
+- Useful when you need more spatial detail and can accept a lower maximum frame rate
 
 ### 🧩 Other / stereo kits (caution)
 
