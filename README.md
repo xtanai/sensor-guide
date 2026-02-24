@@ -124,7 +124,7 @@ For edge-processing architectures focused on precise timing and reproducible res
 
 ---
 
-## 📷 Recommended sensors (available modules)
+## 📍 Recommended sensors (available modules)
 
 Below are practical, readily available **global-shutter** camera modules that work well for NIR / tracking / stereo on Raspberry Pi (CSI-2 MIPI).
 
@@ -147,7 +147,7 @@ Below are practical, readily available **global-shutter** camera modules that wo
 - Good mode support and high frame rates (depending on ROI / sensor modes)
 - Mono + no IR-cut options available on many modules
 
-### 🧠 Up to ~60 FPS (higher resolution)
+### 🎞️ Up to ~60 FPS (higher resolution)
 
 **OV2311 (2 MP) mono global shutter**
 - ArduCAM OV2311 for Raspberry Pi  
