@@ -155,9 +155,9 @@ Below are practical, readily available **global-shutter** camera modules that wo
 
 **IMX296 (1.58 MP) global shutter**
 - ArduCAM IMX296 (color) module  
-  https://www.arducam.com/1-58mp-imx296-color-global-shutter-camera-module-with-m12-lens-for-raspberry-pi.html)
+  [Link](https://www.arducam.com/1-58mp-imx296-color-global-shutter-camera-module-with-m12-lens-for-raspberry-pi.html)
 - Inno-Maker IMX296 RAW + trigger variant  
-  Link](https://www.inno-maker.com/product/cam-mipi296raw-trigger/)
+  [Link](https://www.inno-maker.com/product/cam-mipi296raw-trigger/)
 
 **Why these?**
 - Higher resolution than OV9281
