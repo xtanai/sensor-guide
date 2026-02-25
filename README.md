@@ -193,6 +193,8 @@ The current prototype uses OV9281-, IMX296LLR, AR0145-based modules, currently c
 
 For the next generation, I’m targeting a **RAW-first sensor path** with **transparent, deterministic control**—meaning no opaque or mandatory processing stages in the capture chain. The goal is to take full advantage of **4-lane CSI-2 on Raspberry Pi 5**, increasing throughput and leaving more headroom for advanced modes and future upgrades.
 
+Today’s sensors and modes are still bounded by the Raspberry Pi 5 CPU budget, so the current design stays realistic and avoids “overbuilding” features that the Pi 5 cannot efficiently run. At the same time, the pipeline is structured to be future-ready: as soon as a faster platform (e.g., a future Pi 6) becomes available, the same RAW-first architecture can scale to higher-end sensors and more demanding modes without needing a major redesign.
+
 Securing the right sensor/module partner is feasible—but it depends on **validated demand**.
 
 ### Open, Repeatable Platform (MotionCoder-first)
