@@ -26,7 +26,7 @@ for 3D Hand-Tracking Reconstruction
 
 * **Pixel format**
 
-  * ✅ **RAW10** or **RAW12** – preferred (see rating table above).
+  * ✅ **RAW10** or **RAW12**.
   * ❌ **MJPEG** or full **YUV color formats** – only for preview/debug, **not** for the main 3D/measurement pipeline.
   * **RAW12** offers better quantization (more effective intensity/depth levels), at the cost of higher bandwidth and compute.
   * **Fallback:** **RAW8 / Y8** is acceptable for low-cost / low-bandwidth prototypes.
@@ -80,45 +80,6 @@ for 3D Hand-Tracking Reconstruction
     * working distance,
     * desired measurement volume (e.g., hand vs. full upper body).
   * For detailed formulas and examples, see: **[Vision Geometry Rules](https://github.com/xtanai/geo_rules)**.
-
----
-
-## ⭐ Pixel format – preference
-
-| Format                     |   Rating   | Comment                                                                                  |
-| -------------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| **MJPEG / JPEG**           | ⭐☆☆☆☆     | Only for preview/debug. Strong artifacts, variable bitrate, poor for precise 3D.         |
-| **YUV / YUYV / NV12**      | ⭐⭐☆☆☆    | OK if you only use the **Y (luma)** channel. Extra bandwidth wasted on color info.       |
-| **RAW8 / Y8 (8-bit mono)** | ⭐⭐⭐☆☆   | Solid baseline. Lower dynamic range, but good enough with proper NIR illumination.       |
-| **RAW10**                  | ⭐⭐⭐⭐☆  | Very good: higher dynamic range, finer quantization, still manageable bandwidth.         |
-| **RAW12**                  | ⭐⭐⭐⭐⭐ | Ideal for high precision: maximum dynamic range and depth resolution, highest bandwidth. |
-
----
-
-## ⚙️ Quick Engineering Comparison — What is the best interface for deterministic vision?
-
-When designing a machine-vision or stereo system, the choice of sensor interface has a strong impact on latency, control, and system complexity.
-Below is a simplified engineering comparison:
-
-| Interface              | Additional Chips / Infra | RAW Access | Latency     | Determinism |
-| ---------------------- | ------------------------ | ---------- | ----------- | ---------- |
-| **MIPI CSI-2**         | very few                 | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-| **USB2 (typical UVC)** | medium                   | ⭐☆☆☆☆     | ⭐⭐☆☆☆     | ⭐☆☆☆☆     |
-| **USB3 (typical UVC)** | medium                   | ⭐⭐☆☆☆    | ⭐⭐⭐☆☆   | ⭐⭐☆☆☆     |
-| **GigE / GigE Vision** | many                     | ⭐⭐⭐⭐☆  | ⭐⭐⭐☆☆   | ⭐⭐⭐⭐☆  |
-| **CoaXPress**          | heavy (framegrabber)     | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ |
-
-### Summary
-
-**MIPI CSI-2** is typically the best choice when deterministic timing, minimal latency, and direct RAW sensor access are required. The sensor is connected almost directly to the SoC, which reduces hidden processing stages and keeps the pipeline transparent.
-
-**USB cameras** usually include additional ISP and bridge chips. They are convenient and plug-and-play, but often introduce internal processing and buffering that reduce determinism.
-
-**GigE cameras** are powerful for industrial networking and long cable distances, but typically require more intermediate logic (FPGA/ASIC, packetization, buffering), which increases system complexity.
-
-**CoaXPress** is a high-end industrial interface designed for very high bandwidth and deterministic transmission. It typically requires a dedicated frame grabber card on the host side and specialized hardware inside the camera. While it offers excellent throughput, low latency, and strong determinism, it significantly increases system cost, hardware complexity, and power requirements compared to embedded MIPI-based designs.
-
-For edge-processing architectures focused on precise timing and reproducible results, **MIPI CSI-2 provides the most transparent and controllable capture path**.
 
 ---
 
